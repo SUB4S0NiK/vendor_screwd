@@ -21,7 +21,7 @@ ifeq (screwd_falcon,$(TARGET_PRODUCT))
 include vendor/screwd/main.mk
 
 # Inherit AOSP device configuration
-$(call inherit-product, device/motorola/falcon/full_falcon.mk)
+$(call inherit-product, device/motorola/falcon/aosp_falcon.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := screwd_falcon
@@ -38,9 +38,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="falcon-user 6.0.1 MOB30H 2751534 release-keys"
 
 # Kernel inline build
-TARGET_KERNEL_SOURCE := kernel/motorola/falcon
+TARGET_KERNEL_SOURCE := kernel
 TARGET_KERNEL_CONFIG := falcon_defconfig
-TARGET_GCC_VERSION_ARM := 5.3
+TARGET_GCC_VERSION_ARM := 4.9
 TARGET_KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 
 #Optimize-it!!
