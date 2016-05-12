@@ -40,8 +40,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Kernel inline build
 TARGET_KERNEL_SOURCE := kernel
 TARGET_KERNEL_CONFIG := falcon_defconfig
+#TARGET_PREBUILT_KERNEL := device/motorola/falcon/zImage-dtb
 TARGET_GCC_VERSION_ARM := 4.9
-TARGET_KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
+#TARGET_KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
 #Optimize-it!!
 export STRICT_ALIASING := true
